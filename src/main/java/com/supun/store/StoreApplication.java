@@ -12,6 +12,11 @@ public class StoreApplication {
 		ConfigurableApplicationContext context=  SpringApplication.run(StoreApplication.class, args);
 		var orderService=context.getBean(OrderService.class);
 		orderService.placeOrder();
+
+		var notificationService=context.getBean(NotificationManager.class);
+		notificationService.sendNotification("Hello, this is a test message!");
+
+
 	}
 
 }
