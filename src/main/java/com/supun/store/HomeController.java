@@ -15,6 +15,7 @@ public class HomeController {
     public String index(){
         String viewName = getViewName();
         System.out.println(viewName);
+        System.out.println("App Name: " + appName);
         return viewName;
     }
 
